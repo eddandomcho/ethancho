@@ -1,60 +1,31 @@
-// Dark mode and UI interactions
+// 1 PLAYER Landing Page Interactivity
 
-// 1. Theme toggle initialization
-const themeToggleBtn = document.getElementById('theme-toggle');
-const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+const startBtn = document.getElementById("start-btn");
+const characterBtn = document.getElementById("character-btn");
 
-// Check stored preference or system preference
-const userTheme = localStorage.getItem('theme');
-const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-if (userTheme === 'dark' || (!userTheme && systemDark)) {
-  document.documentElement.classList.add('dark');
-  themeToggleDarkIcon?.classList.add('hidden');
-  themeToggleLightIcon?.classList.remove('hidden');
-} else {
-  document.documentElement.classList.remove('dark');
-  themeToggleLightIcon?.classList.add('hidden');
-  themeToggleDarkIcon?.classList.remove('hidden');
+function triggerStart() {
+  if (startBtn) {
+    startBtn.classList.add("start-pulse");
+    setTimeout(() => {
+      startBtn.classList.remove("start-pulse");
+    }, 600);
+  }
 }
 
-// Toggle button click listener
-if (themeToggleBtn) {
-  themeToggleBtn.addEventListener('click', () => {
-    themeToggleDarkIcon?.classList.toggle('hidden');
-    themeToggleLightIcon?.classList.toggle('hidden');
+// Click events
+startBtn?.addEventListener("click", triggerStart);
 
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-}
+characterBtn?.addEventListener("click", () => {
+  characterBtn.classList.add("start-pulse");
+  setTimeout(() => {
+    characterBtn.classList.remove("start-pulse");
+  }, 600);
+});
 
-// 2. Mobile navigation menu toggle
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-
-if (mobileMenuButton && mobileMenu) {
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  // Close mobile menu when clicking any nav link
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  });
-}
-
-// 3. Dynamic current year in footer
-const yearSpan = document.getElementById('current-year');
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
-}
-
+// Keyboard support (Space, Enter, Down arrow)
+window.addEventListener("keydown", (e) => {
+  if (e.code === "Space" || e.code === "Enter" || e.code === "ArrowDown") {
+    e.preventDefault();
+    triggerStart();
+  }
+});
