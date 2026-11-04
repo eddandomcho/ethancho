@@ -24,11 +24,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body
-    class="bg-[#04041F] text-white antialiased min-h-screen h-screen flex flex-col items-center justify-center overflow-hidden select-none"
+    class="bg-[#04041F] text-white antialiased min-h-screen flex flex-col select-none overflow-x-hidden"
   >
-    <!-- Main Centered Stage -->
-    <main
-      class="w-full max-w-4xl px-4 flex flex-col items-center justify-center relative"
+    <!-- Main Centered Stage: Landing Screen -->
+    <section
+      id="landing"
+      class="w-full min-h-screen flex flex-col items-center justify-center relative px-4"
     >
       <!-- Title: 1 PLAYER (Exact Figma SVG with glow) -->
       <div class="flex justify-center w-full">
@@ -69,7 +70,74 @@
           </svg>
         </button>
       </div>
-    </main>
+    </section>
+
+    <!-- ===== Second Section (Menu) (scrolls here when arrow is clicked) ===== -->
+    <section
+      id="main-content"
+      class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-16"
+    >
+      <div class="menu-board-wrapper">
+        <!-- Hold Window (Left) -->
+        <img
+          src="assets/images/hold_window.png"
+          alt="Hold Window"
+          class="hold-window"
+        />
+
+        <!-- Center: Tetris Game Board -->
+        <div class="image-container">
+          <img
+            src="assets/images/tetris_background.PNG"
+            alt="Tetris Background"
+            class="base-image"
+          />
+
+          <img
+            src="assets/images/about_me_block.PNG"
+            alt="About Me Overlay Image"
+            class="overlay-image"
+            style="--x: -9%; --y: 42.5%; --w: 335px; --z: 8"
+          />
+          <img
+            src="assets/images/skills_block.PNG"
+            alt="Skills Overlay Image"
+            class="overlay-image"
+            style="--x: 47%; --y: 64%; --w: 290px; --z: 7"
+          />
+          <img
+            src="assets/images/hobbies_block.PNG"
+            alt="Hobbies Overlay Image"
+            class="overlay-image"
+            style="--x: 4%; --y: 61%; --w: 330px; --z: 5"
+          />
+          <img
+            src="assets/images/small_block.PNG"
+            alt="Small Block Overlay Image"
+            class="overlay-image"
+            style="--x: 31%; --y: 64%; --w: 205px; --z: 6"
+          />
+        </div>
+
+        <!-- Next Windows (Right) -->
+        <div class="next-panel">
+          <img
+            src="assets/images/next_window.png"
+            alt="Next Window"
+            class="next-window"
+          />
+          <img
+            src="assets/images/next_window_2.png"
+            alt="Next Window 2"
+            class="next-window-2"
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      id="about-me"
+      class="w-full min-h-screen flex flex-col items-center justify-center px-4"
+    ></section>
 
     <!-- Interactive Scripts -->
     <script src="assets/js/main.js"></script>
