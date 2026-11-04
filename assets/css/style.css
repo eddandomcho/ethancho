@@ -1,11 +1,14 @@
 /* Custom styling and animations for 1 PLAYER landing page */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@800;900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #04041f;
 }
 
@@ -50,4 +53,63 @@ body {
   .animate-bounce {
     animation: none !important;
   }
+}
+
+.image-container {
+  position: relative; /* Defines the positioning context for absolute children */
+  display: inline-block; /* Shrinks container width to fit the image */
+}
+
+.base-image {
+  display: block;
+  width: 550px;
+  height: auto;
+}
+
+.overlay-image {
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  z-index: var(--z);
+  /* Force the element box to take its exact intrinsic image content size */
+  width: var(--w);
+}
+
+/* Tetris Menu Layout: flanking side panels around the center board */
+.menu-board-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  gap: 24px;
+  width: 100%;
+}
+
+.hold-window {
+  width: 220px;
+  height: auto;
+  margin-top: 45px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.next-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 45px;
+  flex-shrink: 0;
+}
+
+.next-window {
+  width: 220px;
+  height: auto;
+  display: block;
+}
+
+.next-window-2 {
+  width: 360px;
+  height: auto;
+  display: block;
 }
