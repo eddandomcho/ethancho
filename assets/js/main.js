@@ -43,3 +43,24 @@ window.addEventListener("keydown", (e) => {
     triggerStart();
   }
 });
+
+// Menu Block Navigation: Click any block to smoothly scroll to its section
+const navLinks = document.querySelectorAll("a[href^='#'], [data-target]");
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const targetId =
+      link.getAttribute("data-target") ||
+      link.getAttribute("href")?.replace(/^#/, "");
+    if (!targetId) return;
+
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      e.preventDefault();
+      link.classList.add("start-pulse");
+      setTimeout(() => {
+        link.classList.remove("start-pulse");
+        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 120);
+    }
+  });
+});
