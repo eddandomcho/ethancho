@@ -64,3 +64,24 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+// Side Nav Visibility: reveal when reaching About Me (or below), hide on Landing/Menu
+const sideNav = document.getElementById("side-nav");
+const aboutMeSection = document.getElementById("about-me");
+
+if (sideNav && aboutMeSection) {
+  const updateSideNav = () => {
+    const rect = aboutMeSection.getBoundingClientRect();
+    // Fade in when About Me approaches the viewport
+    if (rect.top <= window.innerHeight * 0.65) {
+      sideNav.classList.remove("opacity-0", "pointer-events-none", "-translate-x-4");
+      sideNav.classList.add("opacity-100", "pointer-events-auto", "translate-x-0");
+    } else {
+      sideNav.classList.add("opacity-0", "pointer-events-none", "-translate-x-4");
+      sideNav.classList.remove("opacity-100", "pointer-events-auto", "translate-x-0");
+    }
+  };
+
+  window.addEventListener("scroll", updateSideNav, { passive: true });
+  updateSideNav();
+}
