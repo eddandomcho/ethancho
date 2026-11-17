@@ -59,7 +59,7 @@
         <img
           src="assets/images/derp_block_trimmed.png"
           alt="Derp Block"
-          class="w-32 sm:w-40 md:w-48 h-auto drop-shadow-[0_8px_24px_rgba(108,151,230,0.25)] animate-float cursor-pointer"
+          class="w-32 sm:w-40 md:w-48 h-auto drop-shadow-[0_8px_24px_rgba(108,151,230,0.25)] cursor-pointer"
           id="character-btn"
         />
       </div>
@@ -73,7 +73,7 @@
           class="group focus:outline-none transition-transform active:scale-95"
         >
           <svg
-            class="w-8 h-14 sm:w-10 sm:h-18 md:w-12 md:h-20 animate-bounce group-hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)] transition-all cursor-pointer"
+            class="w-8 h-14 sm:w-10 sm:h-18 md:w-12 md:h-20 group-hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.8)] transition-all cursor-pointer"
             viewBox="0 0 63 104"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@
 
           <!-- tetris_background 1 (Centered, 20% enlarged) -->
           <div
-            class="absolute left-[390px] top-[125px] w-[420px] h-[604px] pointer-events-none z-[2]"
+            class="absolute left-[420px] top-[100px] w-[370px] h-[670px] pointer-events-none z-[2]"
             data-node-id="3:9"
             data-name="tetris_background 1"
           >
@@ -180,7 +180,7 @@
 
           <!-- derp_block 1 (node 3:14) -->
           <div
-            class="absolute left-[488px] top-[250px] w-[219px] h-[134px] z-[6] transition-transform duration-200 hover:scale-105 cursor-pointer animate-float"
+            class="absolute left-[488px] top-[250px] w-[219px] h-[134px] z-[6] transition-transform duration-200 hover:scale-105 cursor-pointer"
             data-node-id="3:14"
             data-name="derp_block 1"
           >
@@ -414,48 +414,138 @@
       </div>
     </nav>
 
-    <!-- ===== 1. About Me Section (Shifted to right for Nav Bar) ===== -->
+    <!-- ===== 1. About Me Section ===== -->
     <section
       id="about-me"
-      class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-24 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28"
+      class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 md:py-24 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28 overflow-x-clip"
     >
       <div
-        class="max-w-4xl w-full flex flex-col items-center text-center relative"
+        class="max-w-5xl w-full flex flex-col items-center text-center relative"
       >
-        <!-- Korean Flag Cat (Figma node 17:8) -->
-        <div
-          class="absolute -top-12 -left-4 sm:-left-12 md:-left-16 z-10 pointer-events-none animate-float"
-        >
-          <img
-            src="assets/images/cat_korea.png"
-            alt="Korean Cat"
-            class="w-28 sm:w-36 md:w-44 h-auto -rotate-12 drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
-          />
-        </div>
-
-        <!-- Duke Blue Devil (Figma node 17:8) -->
-        <div
-          class="absolute -bottom-8 -right-4 sm:-right-8 md:-right-12 z-10 pointer-events-none animate-float"
-          style="animation-delay: 1.5s"
-        >
-          <img
-            src="assets/images/blue_devil.png"
-            alt="Duke Blue Devil"
-            class="w-24 sm:w-32 md:w-36 h-auto rotate-12 drop-shadow-[0_8px_20px_rgba(0,0,0,0.5)]"
-          />
-        </div>
-
+        <!-- Background Title (Lifted higher and scaled up) -->
         <h2
-          class="text-4xl md:text-5xl font-francois text-white/70 tracking-wider mb-6"
+          class="font-francois text-6xl sm:text-7xl md:text-9xl lg:text-[140px] text-white opacity-80 blur-[2px] tracking-wider select-none leading-none whitespace-nowrap z-0 pointer-events-none -mb-12 sm:-mb-18 md:-mb-24 lg:-mb-32"
         >
           ABOUT ME
         </h2>
+
+        <!-- Main Middle Stage with iPad and Flanking TVs -->
         <div
-          class="w-full min-h-[50vh] rounded-2xl border border-dashed border-white/10 flex items-center justify-center p-8 bg-white/[0.02]"
+          class="relative w-[340px] sm:w-[420px] md:w-[480px] lg:w-[540px] aspect-square flex items-center justify-center select-none"
         >
-          <p class="text-white/40 text-lg font-light">
-            About Me section content
-          </p>
+          <!-- Left TV: Cheep Cheep & Jinro Pose -->
+          <div
+            class="absolute -left-[44%] sm:-left-[47%] md:-left-[49%] top-[1%] sm:top-[1.5%] md:top-[2%] w-[64%] sm:w-[67%] aspect-square z-10 select-none"
+          >
+            <!-- Cheep Cheep perched on TV (Figma node 35:41) -->
+            <div
+              class="absolute -top-[14%] left-[22%] w-[44%] aspect-square z-20 pointer-events-none"
+            >
+              <img
+                src="assets/images/cheep_cheep.png"
+                alt="Cheep Cheep"
+                class="w-full h-full object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)]"
+              />
+            </div>
+
+            <!-- TV Frame (Figma node 36:42) -->
+            <img
+              src="assets/images/about-me-tv.png"
+              alt="Left TV Frame"
+              class="w-full h-full object-contain pointer-events-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+            />
+
+            <!-- Screen: Jinro Pose Photo (Figma node 37:50) -->
+            <div
+              class="absolute top-[41.5%] left-[19%] w-[60%] h-[39%] overflow-hidden rounded-[2px]"
+            >
+              <img
+                src="assets/images/jinro-pose.JPG"
+                alt="Ethan Cho - Jinro Toad"
+                class="w-full h-full object-cover scale-105"
+              />
+            </div>
+          </div>
+
+          <!-- Right TV: Shy Guy & Joo Chiat Street (Aligned with Left TV) -->
+          <div
+            class="absolute left-[78%] sm:left-[80%] md:left-[82%] top-[1%] sm:top-[1.5%] md:top-[2%] w-[64%] sm:w-[67%] aspect-square z-10 select-none"
+          >
+            <!-- Shy Guy floating above TV (Figma node 39:2) -->
+            <div
+              class="absolute -top-[44%] left-[10%] w-[70%] aspect-square z-20 pointer-events-none"
+            >
+              <img
+                src="assets/images/shy_guy.png"
+                alt="Shy Guy"
+                class="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+              />
+            </div>
+
+            <!-- TV Frame (Figma node 37:47) -->
+            <img
+              src="assets/images/about-me-tv.png"
+              alt="Right TV Frame"
+              class="w-full h-full object-contain pointer-events-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+            />
+
+            <!-- Screen: Joo Chiat Photo (Figma node 37:51) -->
+            <div
+              class="absolute top-[41.5%] left-[19%] w-[60%] h-[39%] overflow-hidden rounded-[2px]"
+            >
+              <img
+                src="assets/images/joochiat.JPG"
+                alt="Ethan Cho - Joo Chiat"
+                class="w-full h-full object-cover scale-105"
+              />
+            </div>
+          </div>
+
+          <!-- Main Center iPad (Figma node 37:43) -->
+          <div
+            class="relative w-full h-full z-20 rotate-[2deg] flex items-center justify-center select-none"
+          >
+            <!-- iPad Frame -->
+            <img
+              src="assets/images/ipad.png"
+              alt="iPad"
+              class="w-full h-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.65)]"
+            />
+
+            <!-- Screen Content (Headshot & Bio Info scaled up) -->
+            <div
+              class="absolute top-[21%] left-[25%] w-[50%] h-[60%] flex flex-col items-center justify-center p-2.5 sm:p-3.5 md:p-4 lg:p-5 overflow-hidden text-left"
+            >
+              <!-- Headshot (Figma node 39:4) -->
+              <div
+                class="w-[40%] aspect-square rounded-lg sm:rounded-xl overflow-hidden border border-black/15 shadow-sm mb-2 sm:mb-3 md:mb-3.5 flex-shrink-0"
+              >
+                <img
+                  src="assets/images/ethan-cho-headshot.jpeg"
+                  alt="Ethan Cho"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- Bio Info (Scaled up proportionally) -->
+              <div
+                class="w-full text-black font-sans text-[10px] sm:text-[12px] md:text-[13px] lg:text-[14px] leading-relaxed space-y-0.5 sm:space-y-1 md:space-y-1.5"
+              >
+                <p><span class="font-bold">Name</span>: Ethan Cho</p>
+                <p>
+                  <span class="font-bold">Hometown</span>: Seoul, South Korea
+                </p>
+                <p>
+                  <span class="font-bold">School</span>: Duke University ‘28
+                </p>
+                <p>
+                  <span class="font-bold">Majors</span>: Computer Science &amp;
+                  Statistics (Double Major), Environmental Sciences &amp; Policy
+                  (Minor)
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

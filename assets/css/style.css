@@ -43,49 +43,6 @@ body {
   }
 }
 
-/* Character gentle floating animation */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.animate-float {
-  animation: float 3.5s ease-in-out infinite;
-}
-
-/* Subtle pulse glow for interaction */
-.start-pulse {
-  animation: pulse-ring 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-@keyframes pulse-ring {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.08);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Accessibility: respect reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .animate-float,
-  .animate-bounce {
-    animation: none !important;
-  }
-}
-
 /* Nav Bar Glowing Text Over Dimmed Blocks */
 .nav-block-glow {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.95),

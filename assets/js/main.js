@@ -11,36 +11,17 @@ function scrollToContent() {
   }
 }
 
-// Plays a quick pop animation on the arrow, then scrolls
-function triggerStart() {
-  if (startBtn) {
-    startBtn.classList.add("start-pulse");
-    setTimeout(() => {
-      startBtn.classList.remove("start-pulse");
-      scrollToContent();
-    }, 350); // wait for animation to finish before scrolling
-  } else {
-    scrollToContent();
-  }
-}
-
 // Click: arrow button
-startBtn?.addEventListener("click", triggerStart);
+startBtn?.addEventListener("click", scrollToContent);
 
 // Click: character also scrolls
-characterBtn?.addEventListener("click", () => {
-  characterBtn.classList.add("start-pulse");
-  setTimeout(() => {
-    characterBtn.classList.remove("start-pulse");
-    scrollToContent();
-  }, 350);
-});
+characterBtn?.addEventListener("click", scrollToContent);
 
 // Keyboard support: Space, Enter, or Down Arrow all trigger scroll
 window.addEventListener("keydown", (e) => {
   if (e.code === "Space" || e.code === "Enter" || e.code === "ArrowDown") {
     e.preventDefault();
-    triggerStart();
+    scrollToContent();
   }
 });
 
@@ -56,11 +37,7 @@ navLinks.forEach((link) => {
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
       e.preventDefault();
-      link.classList.add("start-pulse");
-      setTimeout(() => {
-        link.classList.remove("start-pulse");
-        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 120);
+      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 });
