@@ -435,7 +435,7 @@
         >
           <!-- Left TV: Cheep Cheep & Jinro Pose -->
           <div
-            class="absolute -left-[44%] sm:-left-[47%] md:-left-[49%] top-[1%] sm:top-[1.5%] md:top-[2%] w-[64%] sm:w-[67%] aspect-square z-10 select-none"
+            class="absolute -left-[44%] sm:-left-[47%] md:-left-[49%] top-[10%] sm:top-[12%] md:top-[14%] w-[64%] sm:w-[67%] aspect-square z-10 select-none"
           >
             <!-- Cheep Cheep perched on TV (Figma node 35:41) -->
             <div
@@ -469,7 +469,7 @@
 
           <!-- Right TV: Shy Guy & Joo Chiat Street (Aligned with Left TV) -->
           <div
-            class="absolute left-[78%] sm:left-[80%] md:left-[82%] top-[1%] sm:top-[1.5%] md:top-[2%] w-[64%] sm:w-[67%] aspect-square z-10 select-none"
+            class="absolute left-[78%] sm:left-[80%] md:left-[82%] top-[10%] sm:top-[12%] md:top-[14%] w-[64%] sm:w-[67%] aspect-square z-10 select-none"
           >
             <!-- Shy Guy floating above TV (Figma node 39:2) -->
             <div
@@ -553,20 +553,127 @@
     <!-- ===== 2. Experience Section ===== -->
     <section
       id="experience"
-      class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-24 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28"
+      class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 md:py-24 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28 overflow-x-clip"
     >
-      <div class="max-w-4xl w-full flex flex-col items-center text-center">
+      <div
+        class="max-w-5xl w-full flex flex-col items-center text-center relative -translate-y-4 sm:-translate-y-6 md:-translate-y-8"
+      >
+        <!-- Background Title (matching Figma node 45:5) -->
         <h2
-          class="text-4xl md:text-5xl font-francois text-white/70 tracking-wider mb-6"
+          class="font-francois text-6xl sm:text-7xl md:text-9xl lg:text-[140px] text-white opacity-80 blur-[2px] tracking-wider select-none leading-none whitespace-nowrap z-0 pointer-events-none -translate-y-4 sm:-translate-y-6 md:-translate-y-8 -mb-12 sm:-mb-16 md:-mb-20 lg:-mb-24"
         >
           EXPERIENCE
         </h2>
+
+        <!-- Main Experience Board (Figma node 45:7) -->
         <div
-          class="w-full min-h-[50vh] rounded-2xl border border-dashed border-white/10 flex items-center justify-center p-8 bg-white/[0.02]"
+          class="relative w-[90vw] sm:w-[580px] md:w-[700px] lg:w-[820px] xl:w-[900px] aspect-[582/410] z-10 select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
         >
-          <p class="text-white/40 text-lg font-light">
-            Experience section content
-          </p>
+          <!-- Board Background Frame -->
+          <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <img
+              src="assets/images/experience_background.png"
+              alt="Experience Background"
+              class="absolute h-[100.03%] left-0 max-w-none top-[-0.01%] w-[102.23%]"
+            />
+          </div>
+
+          <!-- Work Top Button Group: Namsan + Data Engineering Intern (Figma group 45:12) -->
+          <button
+            type="button"
+            aria-label="Data Engineering Intern at Resource Connector (RECO)"
+            class="group absolute left-[1.55%] top-[21.46%] w-[47.94%] h-[37.56%] p-0 border-0 bg-transparent cursor-pointer z-10 transition-transform duration-200 ease-out hover:scale-[1.03] hover:z-20"
+          >
+            <!-- Namsan Background (Figma node 45:9) -->
+            <div
+              class="absolute left-0 top-[2.60%] w-[99.28%] h-[92.21%] opacity-50 overflow-hidden pointer-events-none"
+            >
+              <img
+                src="assets/images/namsan.PNG"
+                alt="Namsan Seoul Tower"
+                class="absolute h-[157.85%] left-[-0.02%] max-w-none top-[-32.23%] w-[100.04%]"
+              />
+            </div>
+
+            <!-- DE Intern Overlay (Figma node 45:10) -->
+            <div
+              class="absolute left-[4.66%] top-0 w-[95.34%] h-full pointer-events-none"
+            >
+              <img
+                src="assets/images/de_intern.png"
+                alt="Data Engineering Intern - Resource Connector (RECO) 2026/05 - 2026/08"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </button>
+
+          <!-- Work Bottom Button Group: Dook + Data Science Intern (Figma group 45:13) -->
+          <button
+            type="button"
+            aria-label="Data Science Intern at Duke Ocean Synthesis Lab"
+            class="group absolute left-[3.44%] top-[56.34%] w-[47.08%] h-[37.07%] p-0 border-0 bg-transparent cursor-pointer z-10 transition-transform duration-200 ease-out hover:scale-[1.03] hover:z-20"
+          >
+            <!-- Dook Background (Figma node 45:8) -->
+            <div
+              class="absolute left-0 top-[1.97%] w-full h-[95.39%] opacity-50 overflow-hidden pointer-events-none"
+            >
+              <img
+                src="assets/images/dook.PNG"
+                alt="Duke Chapel"
+                class="absolute h-[152.42%] left-[-0.04%] max-w-none top-[-26.61%] w-[100.08%]"
+              />
+            </div>
+
+            <!-- DS Intern Overlay (Figma node 45:11) -->
+            <div
+              class="absolute left-[1.46%] top-0 w-[96.35%] h-full pointer-events-none"
+            >
+              <img
+                src="assets/images/ds_intern.png"
+                alt="Data Science Intern - Duke Ocean Synthesis Lab 2025/05 - 2025/09"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </button>
+
+          <!-- Leadership Top Button: ASA (Figma node 53:2) -->
+          <button
+            type="button"
+            aria-label="Outreach Chair - Duke Asian Students Association"
+            class="absolute left-[49.14%] top-[17.80%] w-[45.53%] h-[27.56%] p-0 border-0 bg-transparent cursor-pointer z-10 transition-transform duration-200 ease-out hover:scale-[1.03] hover:z-20"
+          >
+            <img
+              src="assets/images/asa_block.png"
+              alt="Outreach Chair - Duke Asian Students Association"
+              class="w-full h-full object-contain pointer-events-none"
+            />
+          </button>
+
+          <!-- Leadership Middle Button: KAjok (Figma node 53:3) -->
+          <button
+            type="button"
+            aria-label="External Events Chair - Duke KAjok (Korean-American Student's Association)"
+            class="absolute left-[49.48%] top-[41.46%] w-[45.19%] h-[30.49%] p-0 border-0 bg-transparent cursor-pointer z-10 transition-transform duration-200 ease-out hover:scale-[1.03] hover:z-20"
+          >
+            <img
+              src="assets/images/kajok_block.png"
+              alt="External Events Chair - Duke KAjok"
+              class="w-full h-full object-contain pointer-events-none"
+            />
+          </button>
+
+          <!-- Leadership Bottom Button: TKD (Figma node 53:4) -->
+          <button
+            type="button"
+            aria-label="Vice President of Communications - Duke Club Taekwondo"
+            class="absolute left-[49.83%] top-[67.32%] w-[44.67%] h-[27.56%] p-0 border-0 bg-transparent cursor-pointer z-10 transition-transform duration-200 ease-out hover:scale-[1.03] hover:z-20"
+          >
+            <img
+              src="assets/images/tkd_block.png"
+              alt="Vice President of Communications - Duke Club Taekwondo"
+              class="w-full h-full object-contain pointer-events-none"
+            />
+          </button>
         </div>
       </div>
     </section>
