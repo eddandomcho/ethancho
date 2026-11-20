@@ -1,5 +1,5 @@
 /* Custom styling and animations for 1 PLAYER landing page */
-@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Rubik:wght@800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Fuzzy+Bubbles:wght@400;700&family=Rubik:wght@800;900&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -18,6 +18,10 @@ body {
 
 .font-francois {
   font-family: "Francois One", sans-serif;
+}
+
+.font-fuzzy {
+  font-family: "Fuzzy Bubbles", cursive, sans-serif;
 }
 
 /* Tetris Menu Stage: 1200x820 */
@@ -49,6 +53,12 @@ body {
                0 0 20px rgba(255, 255, 255, 0.8),
                0 0 35px rgba(255, 255, 255, 0.5),
                0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Subtle Silhouette Glow for Floating Characters */
+.character-glow {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.32))
+          drop-shadow(0 0 18px rgba(255, 140, 120, 0.22));
 }
 
 

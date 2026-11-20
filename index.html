@@ -6,11 +6,11 @@
     <title>1 PLAYER — Ethan Cho</title>
     <meta name="description" content="1 PLAYER — Interactive Landing Page" />
 
-    <!-- Google Fonts: Francois One & Rubik -->
+    <!-- Google Fonts: Francois One, Fuzzy Bubbles & Rubik -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Francois+One&family=Rubik:wght@800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Francois+One&family=Fuzzy+Bubbles:wght@400;700&family=Rubik:wght@800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -25,6 +25,7 @@
             },
             fontFamily: {
               francois: ['"Francois One"', "sans-serif"],
+              fuzzy: ['"Fuzzy Bubbles"', "cursive", "sans-serif"],
               arcade: ["Rubik", "sans-serif"],
             },
           },
@@ -89,7 +90,9 @@
       id="main-content"
       class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-16 overflow-hidden relative"
     >
-      <div class="tetris-menu-wrapper">
+      <div
+        class="tetris-menu-wrapper -translate-y-4 sm:-translate-y-5 md:-translate-y-6"
+      >
         <div
           class="tetris-menu-stage relative w-[1200px] h-[820px] select-none"
           data-node-id="3:4"
@@ -444,7 +447,7 @@
               <img
                 src="assets/images/cheep_cheep.png"
                 alt="Cheep Cheep"
-                class="w-full h-full object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)]"
+                class="w-full h-full object-contain character-glow"
               />
             </div>
 
@@ -465,6 +468,16 @@
                 class="w-full h-full object-cover scale-105"
               />
             </div>
+
+            <!-- Left Bio Paragraph (Figma node 55:9) -->
+            <p
+              class="absolute top-[97%] left-1/2 -translate-x-1/2 w-[78%] font-fuzzy text-[9px] sm:text-[11px] md:text-[13px] lg:text-[14px] leading-snug text-center text-white select-text"
+            >
+              I’m a back-end developer interested in data analytics,
+              infrastructure, and databases. Working with big datasets excites
+              me, and I’m curious how data can help us address the most pressing
+              issues in our world.
+            </p>
           </div>
 
           <!-- Right TV: Shy Guy & Joo Chiat Street (Aligned with Left TV) -->
@@ -478,7 +491,7 @@
               <img
                 src="assets/images/shy_guy.png"
                 alt="Shy Guy"
-                class="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+                class="w-full h-full object-contain character-glow"
               />
             </div>
 
@@ -499,53 +512,72 @@
                 class="w-full h-full object-cover scale-105"
               />
             </div>
+
+            <!-- Right Bio Paragraph (Figma node 55:10) -->
+            <p
+              class="absolute top-[97%] left-1/2 -translate-x-1/2 w-[78%] font-fuzzy text-[9px] sm:text-[11px] md:text-[13px] lg:text-[14px] leading-snug text-center text-white select-text"
+            >
+              I’ve worked with so many types of data: environmental,
+              socioeconomic, business, mortgages, and more. Particularly, I like
+              to wrangle random datasets that interest me in my free time,
+              whether it be those related to nature, Korea, or even Pokémon!
+            </p>
           </div>
 
-          <!-- Main Center iPad (Figma node 37:43) -->
+          <!-- Main Center iPad with Hand-Drawn Bio (Figma node 58:4) -->
           <div
-            class="relative w-full h-full z-20 rotate-[2deg] flex items-center justify-center select-none"
+            class="relative w-full h-full z-20 rotate-[1.95deg] flex items-center justify-center select-none"
           >
-            <!-- iPad Frame -->
+            <!-- Word iPad Frame -->
             <img
-              src="assets/images/ipad.png"
-              alt="iPad"
+              src="assets/images/wordipad.png"
+              alt="Ethan Cho Bio iPad"
               class="w-full h-full object-contain pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.65)]"
             />
 
-            <!-- Screen Content (Headshot & Bio Info scaled up) -->
+            <!-- Selfie Photo on iPad Screen (Figma node 58:2) -->
             <div
-              class="absolute top-[21%] left-[25%] w-[50%] h-[60%] flex flex-col items-center justify-center p-2.5 sm:p-3.5 md:p-4 lg:p-5 overflow-hidden text-left"
+              class="absolute left-[29.07%] top-[23.96%] w-[42.46%] h-[26.49%] -rotate-[1.66deg] rounded-[3px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] overflow-hidden"
             >
-              <!-- Headshot (Figma node 39:4) -->
-              <div
-                class="w-[40%] aspect-square rounded-lg sm:rounded-xl overflow-hidden border border-black/15 shadow-sm mb-2 sm:mb-3 md:mb-3.5 flex-shrink-0"
-              >
-                <img
-                  src="assets/images/ethan-cho-headshot.jpeg"
-                  alt="Ethan Cho"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-
-              <!-- Bio Info (Scaled up proportionally) -->
-              <div
-                class="w-full text-black font-sans text-[10px] sm:text-[12px] md:text-[13px] lg:text-[14px] leading-relaxed space-y-0.5 sm:space-y-1 md:space-y-1.5"
-              >
-                <p><span class="font-bold">Name</span>: Ethan Cho</p>
-                <p>
-                  <span class="font-bold">Hometown</span>: Seoul, South Korea
-                </p>
-                <p>
-                  <span class="font-bold">School</span>: Duke University ‘28
-                </p>
-                <p>
-                  <span class="font-bold">Majors</span>: Computer Science &amp;
-                  Statistics (Double Major), Environmental Sciences &amp; Policy
-                  (Minor)
-                </p>
-              </div>
+              <img
+                src="assets/images/selfie.JPG"
+                alt="Ethan Cho Selfie"
+                class="absolute h-[120.21%] left-[0.06%] max-w-none top-[-14.82%] w-full pointer-events-none"
+              />
             </div>
           </div>
+        </div>
+
+        <!-- Social Links beneath iPad: LinkedIn (Figma node 60:6) & GitHub -->
+        <div
+          class="relative z-20 flex items-center justify-center gap-5 sm:gap-7 -mt-4 sm:-mt-5 md:-mt-6 select-none"
+        >
+          <a
+            href="https://www.linkedin.com/in/ethancho05/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="block w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] lg:w-20 lg:h-20 transition-transform duration-200 hover:scale-110 cursor-pointer"
+          >
+            <img
+              src="assets/images/linkedin.png"
+              alt="LinkedIn"
+              class="w-full h-full object-contain pointer-events-none"
+            />
+          </a>
+          <a
+            href="https://github.com/eddandomcho"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="block w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] lg:w-20 lg:h-20 transition-transform duration-200 hover:scale-110 cursor-pointer"
+          >
+            <img
+              src="assets/images/github.png"
+              alt="GitHub"
+              class="w-full h-full object-contain pointer-events-none"
+            />
+          </a>
         </div>
       </div>
     </section>
@@ -569,8 +601,21 @@
         <div
           class="relative w-[90vw] sm:w-[580px] md:w-[700px] lg:w-[820px] xl:w-[900px] aspect-[582/410] z-10 select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
         >
+          <!-- Blue Devil peeking from behind the board (Figma node 53:5) -->
+          <div
+            class="absolute left-[85%] top-[46%] w-[36%] aspect-square rotate-[11.49deg] z-0 pointer-events-none select-none"
+          >
+            <img
+              src="assets/images/blue_devil.png"
+              alt="Blue Devil"
+              class="w-full h-full object-contain"
+            />
+          </div>
+
           <!-- Board Background Frame -->
-          <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            class="absolute inset-0 overflow-hidden pointer-events-none z-[1]"
+          >
             <img
               src="assets/images/experience_background.png"
               alt="Experience Background"
