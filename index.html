@@ -262,6 +262,13 @@
               alt="Next Window"
               class="w-full h-full object-contain pointer-events-none"
             />
+            <!-- square_block 1 (node 66:3) -->
+            <img
+              src="assets/images/square_block.png"
+              alt="Square Tetromino"
+              data-node-id="66:3"
+              class="absolute left-1/2 top-[61%] -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] object-contain pointer-events-none"
+            />
           </div>
 
           <!-- next_window_2 1 (node 17:6) -->
@@ -287,6 +294,13 @@
               src="assets/images/hold_window.png"
               alt="Hold Window"
               class="w-full h-full object-contain pointer-events-none"
+            />
+            <!-- l_block 1 (node 66:2) -->
+            <img
+              src="assets/images/l_block.png"
+              alt="L Tetromino"
+              data-node-id="66:2"
+              class="absolute left-1/2 top-[61%] -translate-x-1/2 -translate-y-1/2 w-[111px] h-[111px] object-contain pointer-events-none"
             />
           </div>
         </div>
@@ -447,7 +461,7 @@
               <img
                 src="assets/images/cheep_cheep.png"
                 alt="Cheep Cheep"
-                class="w-full h-full object-contain character-glow"
+                class="w-full h-full object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)]"
               />
             </div>
 
@@ -491,7 +505,7 @@
               <img
                 src="assets/images/shy_guy.png"
                 alt="Shy Guy"
-                class="w-full h-full object-contain character-glow"
+                class="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
               />
             </div>
 
@@ -726,20 +740,135 @@
     <!-- ===== 3. Projects Section ===== -->
     <section
       id="projects"
-      class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-24 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28"
+      class="w-full min-h-screen flex flex-col items-center justify-start px-4 pt-12 pb-16 sm:pt-14 sm:pb-20 md:pt-16 md:pb-24 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28 overflow-x-clip"
     >
-      <div class="max-w-4xl w-full flex flex-col items-center text-center">
+      <div
+        class="max-w-5xl w-full flex flex-col items-center text-center relative"
+      >
+        <!-- Background Title (matching Figma node 54:7) -->
         <h2
-          class="text-4xl md:text-5xl font-francois text-white/70 tracking-wider mb-6"
+          class="font-francois text-6xl sm:text-7xl md:text-9xl lg:text-[140px] text-white opacity-80 blur-[2px] tracking-wider select-none leading-none whitespace-nowrap z-0 pointer-events-none -mb-8 sm:-mb-10 md:-mb-14 lg:-mb-16"
         >
           PROJECTS
         </h2>
+
+        <!-- Jenga Tower Stage (Figma frame 17:30 - Before Hover) -->
         <div
-          class="w-full min-h-[50vh] rounded-2xl border border-dashed border-white/10 flex items-center justify-center p-8 bg-white/[0.02]"
+          class="relative w-[260px] sm:w-[310px] md:w-[340px] lg:w-[370px] aspect-[274/432] z-10 select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
         >
-          <p class="text-white/40 text-lg font-light">
-            Projects section content
-          </p>
+          <!-- Row 1 (End-grain): jenga-31 (Figma node 67:4) -->
+          <div
+            class="absolute left-[0.73%] top-0 w-[99.27%] h-[22.69%] z-10 overflow-hidden pointer-events-none"
+            data-node-id="67:4"
+          >
+            <img
+              src="assets/images/jenga-31.png"
+              alt="Jenga Row 1"
+              class="absolute h-[277.55%] left-0 max-w-none top-[-96.94%] w-full"
+            />
+          </div>
+
+          <!-- Row 3 (End-grain): jenga-32 (Figma node 67:12) -->
+          <div
+            class="absolute left-[0.73%] top-[22.69%] w-[99.27%] h-[20.83%] z-10 overflow-hidden pointer-events-none"
+            data-node-id="67:12"
+          >
+            <img
+              src="assets/images/jenga-32.png"
+              alt="Jenga Row 3"
+              class="absolute h-[302.22%] left-0 max-w-none top-[-105.56%] w-full"
+            />
+          </div>
+
+          <!-- Row 5 (End-grain, rotated 180deg): jenga-33 (Figma node 67:13) -->
+          <div
+            class="absolute left-[0.73%] top-[45.37%] w-[99.27%] h-[23.61%] z-10 rotate-180 overflow-hidden pointer-events-none"
+            data-node-id="67:13"
+          >
+            <img
+              src="assets/images/jenga-33.png"
+              alt="Jenga Row 5"
+              class="absolute h-[266.67%] left-0 max-w-none top-[-91.18%] w-full"
+            />
+          </div>
+
+          <!-- Row 7 (End-grain, rotated 180deg): jenga-34 (Figma node 67:14) -->
+          <div
+            class="absolute left-[0.73%] top-[68.75%] w-[99.27%] h-[22.22%] z-10 rotate-180 overflow-hidden pointer-events-none"
+            data-node-id="67:14"
+          >
+            <img
+              src="assets/images/jenga-34.png"
+              alt="Jenga Row 7"
+              class="absolute h-[283.33%] left-0 max-w-none top-[-100%] w-full"
+            />
+          </div>
+
+          <!-- Row 2 (Project): OOPSINCART (Figma node 67:15 -> 67:36 on hover) -->
+          <button
+            type="button"
+            aria-label="OOPSINCART Project"
+            class="group absolute left-0 top-[14.35%] w-[99.27%] h-[15.97%] z-20 p-0 border-0 bg-transparent cursor-pointer"
+            data-node-id="67:15"
+          >
+            <div
+              class="relative w-full h-full overflow-hidden transition-transform duration-500 ease-out group-hover:translate-x-[18.75%]"
+            >
+              <img
+                src="assets/images/jenga-oopsincart.png"
+                alt="OOPSINCART"
+                class="absolute h-[394.2%] left-0 max-w-none top-[-159.42%] w-full pointer-events-none"
+              />
+            </div>
+          </button>
+
+          <!-- Row 4 (Project): Korea Polygon Pipeline (Figma node 67:16 -> 67:37 on hover) -->
+          <button
+            type="button"
+            aria-label="Korea Polygon Pipeline Project"
+            class="group absolute left-[0.73%] top-[37.50%] w-[99.27%] h-[16.20%] z-20 p-0 border-0 bg-transparent cursor-pointer"
+            data-node-id="67:16"
+          >
+            <div
+              class="relative w-full h-full overflow-hidden transition-transform duration-500 ease-out group-hover:translate-x-[22.79%]"
+            >
+              <img
+                src="assets/images/jenga-polygon.png"
+                alt="Korea Polygon Pipeline"
+                class="absolute h-[388.57%] left-0 max-w-none top-[-160%] w-full pointer-events-none"
+              />
+            </div>
+          </button>
+
+          <!-- Row 6 (Project): Coastal Climate Dashboard (Figma node 67:17 -> 67:38 on hover) -->
+          <button
+            type="button"
+            aria-label="Coastal Climate Dashboard Project"
+            class="group absolute left-[0.36%] top-[60.19%] w-[99.27%] h-[16.90%] z-20 p-0 border-0 bg-transparent cursor-pointer"
+            data-node-id="67:17"
+          >
+            <div
+              class="relative w-full h-full overflow-hidden transition-transform duration-500 ease-out group-hover:translate-x-[19.85%]"
+            >
+              <img
+                src="assets/images/jengal-coastal.png"
+                alt="Coastal Climate Dashboard"
+                class="absolute h-[372.6%] left-0 max-w-none top-[-152.05%] w-full pointer-events-none"
+              />
+            </div>
+          </button>
+
+          <!-- Row 8 (Base): empty_jenga (Figma node 67:18) -->
+          <div
+            class="absolute left-[0.73%] top-[82.64%] w-[99.27%] h-[17.36%] z-20 overflow-hidden pointer-events-none"
+            data-node-id="67:18"
+          >
+            <img
+              src="assets/images/empty_jenga.png"
+              alt="Jenga Base Block"
+              class="absolute h-[362.67%] left-0 max-w-none top-[-145.33%] w-full"
+            />
+          </div>
         </div>
       </div>
     </section>

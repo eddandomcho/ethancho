@@ -55,10 +55,4 @@ body {
                0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Subtle Silhouette Glow for Floating Characters */
-.character-glow {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.32))
-          drop-shadow(0 0 18px rgba(255, 140, 120, 0.22));
-}
-
 
