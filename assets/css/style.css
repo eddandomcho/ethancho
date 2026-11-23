@@ -55,4 +55,17 @@ body {
                0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* Mouse Fairy Hover: slides all long project Jenga blocks to the right */
+#jenga-tower:has(#mouse-fairy:hover) .jenga-slide-oopsincart {
+  transform: translateX(18.75%);
+}
+
+#jenga-tower:has(#mouse-fairy:hover) .jenga-slide-polygon {
+  transform: translateX(22.79%);
+}
+
+#jenga-tower:has(#mouse-fairy:hover) .jenga-slide-coastal {
+  transform: translateX(19.85%);
+}
+
 
