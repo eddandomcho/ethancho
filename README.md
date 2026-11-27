@@ -2,6 +2,8 @@
 
 A clean, modern, and responsive personal portfolio built with **HTML5** and **Tailwind CSS**.
 
+In the works, but can currently visit at https://eddandomcho.github.io/ethancho/
+
 ## Features
 
 - **Dark Mode Support:** Automatically detects system preferences and includes an interactive toggle with persistent local storage.
