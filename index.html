@@ -912,7 +912,7 @@
     <!-- ===== 4. Skills Section ===== -->
     <section
       id="skills"
-      class="w-full min-h-screen flex flex-col items-center justify-start px-4 pt-4 pb-36 sm:pt-6 sm:pb-44 md:pt-8 md:pb-52 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28 overflow-x-clip"
+      class="w-full min-h-screen flex flex-col items-center justify-start px-4 pt-8 pb-36 sm:pt-10 sm:pb-44 md:pt-12 md:pb-52 relative pl-12 sm:pl-20 md:pl-24 lg:pl-28 overflow-x-clip"
     >
       <div
         class="max-w-5xl w-full flex flex-col items-center text-center relative"
@@ -940,6 +940,7 @@
 
           <!-- Cat Face on Screen: Open by default, Closed on hover (Figma node 74:33) -->
           <div
+            id="cat-face-screen"
             class="group absolute left-[30.49%] top-[36.34%] w-[39.01%] h-[44.51%] z-10 cursor-pointer"
             data-node-id="74:33"
           >
@@ -953,6 +954,58 @@
               alt="Cat Face Closed"
               class="absolute inset-0 w-full h-full object-contain pointer-events-none opacity-0 group-hover:opacity-100"
             />
+          </div>
+
+          <!-- Data Skills Screen (Figma node 78:13, toggled by O / DATA button) -->
+          <div
+            id="skills-data-screen"
+            class="hidden absolute left-[14.03%] top-[35%] w-[74.11%] h-[48%] z-10 flex-col justify-center text-left font-fuzzy text-white text-[8.5px] sm:text-[10.5px] md:text-[13px] lg:text-[15px] xl:text-[17px] leading-snug space-y-0.5 sm:space-y-1 select-text"
+            data-node-id="78:13"
+          >
+            <p>
+              <span class="font-bold">Querying &amp; Warehousing:</span> SQL,
+              PostgreSQL, MariaDB, AWS Athena (Presto), Parquet, Data
+              Warehousing
+            </p>
+            <p>
+              <span class="font-bold">Pipelines &amp; Orchestration:</span>
+              Apache Airflow, dbt, ETL Pipelines, AWS Glue, AWS S3
+            </p>
+            <p>
+              <span class="font-bold">Analysis, ML &amp; Geospatial:</span>
+              Python, R, Machine Learning, Statistical Modeling, R Shiny,
+              GeoPandas, sf, terra, QGIS
+            </p>
+            <p>
+              <span class="font-bold">BI &amp; Reporting:</span> Metabase,
+              NocoDB, DBeaver
+            </p>
+          </div>
+
+          <!-- General Skills Screen (Figma node 79:14, toggled by X / GENERAL button) -->
+          <div
+            id="skills-general-screen"
+            class="hidden absolute left-[14.03%] top-[35%] w-[74.11%] h-[48%] z-10 flex-col justify-center text-left font-fuzzy text-white text-[8.5px] sm:text-[10.5px] md:text-[13px] lg:text-[15px] xl:text-[17px] leading-snug space-y-0.5 sm:space-y-1 select-text"
+            data-node-id="79:14"
+          >
+            <p>
+              <span class="font-bold">Programming &amp; Scripting:</span> Java,
+              C, Python, Bash
+            </p>
+            <p>
+              <span class="font-bold">Backend &amp; Web:</span> Flask, REST
+              APIs, Authentication &amp; Security (Flask-Login, Werkzeug),
+              Relational Schema Design
+            </p>
+            <p>
+              <span class="font-bold">DevOps, Cloud &amp; Systems:</span>
+              Docker, Linux, Git/GitHub, CI/CD, Automated Testing, AWS (EC2,
+              Lambda)
+            </p>
+            <p>
+              <span class="font-bold">Spoken Languages:</span> English (Native),
+              Korean (Native), Mandarin (Working)
+            </p>
           </div>
 
           <!-- O Button: DATA (Figma node 75:35) -->
@@ -1034,6 +1087,6 @@
     </section>
 
     <!-- Interactive Scripts -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=3"></script>
   </body>
 </html>
